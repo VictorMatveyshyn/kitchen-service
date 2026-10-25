@@ -1,9 +1,10 @@
-asgiref==3.11.1
-colorama==0.4.6
+asgiref==3.13.0
 crispy-bootstrap5==2026.9
-Django==6.0.5
+Django==6.1.2
 django-crispy-forms==2.7
 django-debug-toolbar==8.0.0
+sqlparse==0.6.0
+tzdata==2026.5
 iniconfig==2.3.0
 packaging==26.2
 pluggy==1.6.0
