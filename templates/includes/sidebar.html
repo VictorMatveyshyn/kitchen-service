@@ -1,0 +1,20 @@
+<ul class="sidebar-nav list-group">
+  {% if user.is_authenticated %}
+    <li class="list-group-item">User:{{ user.get_username }}</li>
+    <li class="list-group-item"><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+  {% else %}
+    <li class="list-group-item"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+  {% endif %}
+
+  <br>
+
+  <li class="list-group-item"><a href="{% url 'kitchen:index' %}">Home</a></li>
+  <li class="list-group-item">All cooks</li>
+  <li class="list-group-item">All dishes</li>
+  <li class="list-group-item">All dishes type</li>
+  <li class="list-group-item">All ingredients</li>
+</ul>
+<!--<a href=" user.get_absolute_url ">{{ user.get_username }}</a>-->
+<!--  <li class="list-group-item"><a href="{ url 'taxi:driver-list' %}">All cooks</a></li>-->
+<!--  <li class="list-group-item"><a href="{ url 'taxi:car-list' %}">All dishes</a></li>-->
+<!--  <li class="list-group-item"><a href="{ url 'taxi:manufacturer-list' %}">All dishes type</a></li>-->
