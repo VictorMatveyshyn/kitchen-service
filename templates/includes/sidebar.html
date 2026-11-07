@@ -4,7 +4,7 @@
     <li class="list-group-item">
         <form action="{% url 'logout'%}" method="post">
           {% csrf_token %}
-          <input type="submit" value="Logout">
+          <input type="submit" value="Logout" class="btn btn-link p-0 m-0 align-baseline">
         </form>
     </li>
   {% else %}
@@ -14,7 +14,7 @@
   <br>
 
   <li class="list-group-item"><a href="{% url 'kitchen:index' %}">Home</a></li>
-  <li class="list-group-item">All cooks</li>
+  <li class="list-group-item"><a href="{% url 'kitchen:cook-list' %}">All cooks</a></li>
   <li class="list-group-item">All dishes</li>
   <li class="list-group-item">All dishes type</li>
   <li class="list-group-item">All ingredients</li>

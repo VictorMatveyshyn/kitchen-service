@@ -8,11 +8,11 @@ from kitchen.views import (
     # CarUpdateView,
     # CarDeleteView,
     # car_assign_driver,
-    # DriverListView,
-    # DriverCreateView,
-    # DriverDetailView,
-    # DriverLicenseUpdateView,
-    # DriverDeleteView,
+    CookListView,
+    CookCreateView,
+    CookDetailView,
+    CookUpdateView,
+    DriverDeleteView,
     # ManufacturerListView,
     # ManufacturerCreateView,
     # ManufacturerUpdateView,
@@ -48,20 +48,25 @@ urlpatterns = [
     # path("cars/<int:pk>/delete/", CarDeleteView.as_view(), name="car-delete"),
     # path("cars/<int:car_id>/<int:driver_id>/assign/",
     #      car_assign_driver, name="car-assign"),
-    # path("drivers/", DriverListView.as_view(), name="driver-list"),
-    # path("drivers/create/", DriverCreateView.as_view(), name="driver-create"),
+    path("cooks/", CookListView.as_view(), name="cook-list"),
+    path("cooks/create/", CookCreateView.as_view(), name="cook-create"),
     # path(
     #     "drivers/license/<int:pk>/",
     #     DriverLicenseUpdateView.as_view(), name="driver-update"
     # ),
-    # path(
-    #     "drivers/<int:pk>/", DriverDetailView.as_view(), name="driver-detail"
-    # ),
-    # path(
-    #     "drivers/<int:pk>/delete/",
-    #     DriverDeleteView.as_view(),
-    #     name="driver-delete"
-    # ),
+    path(
+        "cooks/<int:pk>/", CookDetailView.as_view(), name="cook-detail"
+    ),
+    path(
+        "cooks/<int:pk>/delete/",
+        DriverDeleteView.as_view(),
+        name="cook-delete"
+    ),
+    path(
+        "cooks/<int:pk>/update/",
+        CookUpdateView.as_view(),
+        name="cook-update",
+    ),
 ]
 
 app_name = "kitchen"
